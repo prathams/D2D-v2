@@ -1,0 +1,15 @@
+<template name="login">
+{{>navigation}}
+<div class="container">
+<br>
+<div class="span3"></div><p><img src="/2.png" height="40%" width="40%"></p>
+	<div class="span4"></div><h2>Log In</h2>
+	<p class="text-warning">{{error_message}}</p>
+    <form class="form-auth">
+    	 <div class="span4"></div><input type="text" name="loginClient" placeholder="Client ID"><br>
+       <div class="span4"></div> <input type="email" name="loginEmail" placeholder="Email"><br>
+       <div class="span4"></div> <input type="password" name="loginPassword" placeholder="Password"><br>
+       <div class="span4"></div>  <input class="btn btn-primary" type="submit" value="Authenticate">
+    </form>
+    </div>
+</template>

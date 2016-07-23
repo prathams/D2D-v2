@@ -1,0 +1,15 @@
+<template name="register">
+{{>navigation}}
+<div class="container">	
+<div class="span3"></div><p><img src="/2.png" height="40%" width="40%"></p>
+	<div class="span4"></div><h2>Register</h2>
+	<p class="text-warning">{{error_message}}</p>
+    <form class="form-auth">
+         <div class="span4"></div><input type="text" name="clientId" placeholder="Client ID"><br>
+        <div class="span4"></div> <input type="email" name="registerEmail" placeholder="Email"><br>
+        <div class="span4"></div> <input type="password" name="registerPassword" placeholder="Passsword"><br>
+        <div class="span4"></div> <input type="text" name="registerphone" placeholder="Phone Number"><br>
+       <div class="span4"></div> <input class="btn btn-primary" type="submit" value="Register">
+    </form>
+</div>
+</template>

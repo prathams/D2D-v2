@@ -1,0 +1,215 @@
+<template name="constraints">
+
+  {{>navigation}}
+ <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        {{>sidebar}}
+      </div>
+      <div class="span10 ">
+          <div class="page-header text-center">
+          <h2>Load Balancing</h2>
+          
+          <!-- the links to our nested states using relative paths -->
+          <!-- add the active class if the state matches our ui-sref -->
+          <div id="status-buttons" class="text-center">
+              <a ui-sref-active="active" href="/loadb/constraints" style="color:red"><span>1</span> Constraints</a>
+              <a ui-sref-active="active" href="/loadb/layer-group"><span>2</span> Layer-Group</a>
+              <a ui-sref-active="active" href="/loadb/layer-strategy" ><span>3</span>Layer Strategy</a>
+              <a ui-sref-active="active" href="/loadb/criticality"><span>4</span>Criticality</a>
+              <a ui-sref-active="active" href="/loadb/upload"><span>5</span> File Upload</a>
+          </div>
+      </div>
+      <div id="form-views" ui-view>
+<label><b>Apply the constraints on the file uploaded</b></label>
+<br>
+<div class="row">
+<div class="form-group"><!--ship to customer-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Ship to Customer</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="ship_to_customer">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="ship_to_customer"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--ship to customer-->
+</div> <!--  class row ends -->
+<br>
+<div class="row">
+<div class="form-group"><!--product type-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Product Type</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="product_type">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="product_type"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--product type-->
+</div> <!--  class row ends -->
+<br>
+<div class="row">
+<div class="form-group"><!--Zip Code-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Zip Code</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="zipcode">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="zipcode"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--Zip code-->
+</div> <!--  class row ends -->
+<br>
+
+<div class="row">
+<div class="form-group"><!--warehouse-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Warehouse</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="warehouse">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="warehouse"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--swarehouse-->
+</div> <!--  class row ends -->
+<br>
+
+<div class="row">
+<div class="form-group"><!--wh building-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>WH Building</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="wh_building">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="wh-building"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--wh building-->
+</div> <!--  class row ends -->
+<br>
+
+<div class="row">
+<div class="form-group"><!--pick codes-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Pick Codes</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="pick_codes">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="pick_codes"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--pick codes-->
+</div> <!--  class row ends -->
+<br>
+
+<div class="row">
+<div class="form-group"><!--product weight-->
+<div class="span1">
+  
+</div>
+<div class="span2">
+ <label>Product Weight</label>
+ </div>
+ <div class="span1">
+    <div class="radio">
+      <input type="radio" ng-model="formData.type" value="Yes" checked name="product_weight">Yes
+    </div>
+    </div>
+    <div class="span2">
+    <div class="radio">  
+      <input type="radio" ng-model="formData.type" value="No" name="product_weight"> No
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Maintain">
+
+ 
+</div><!--product weight-->
+</div> <!--  class row ends -->
+<br>
+
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+<div class="span1">
+  
+</div>
+    <a href="/loadb/layer-group" class="btn btn-block btn-info span8">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</template>

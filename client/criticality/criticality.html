@@ -1,0 +1,111 @@
+<template name="criticality">
+ {{>navigation}}
+
+
+ <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        {{>sidebar}}
+      </div>
+      <div class="span10 ">
+      
+  <div class="form-container">
+          <div class="page-header text-center">
+          <h2>Load Balancing</h2>
+          
+          <!-- the links to our nested states using relative paths -->
+          <!-- add the active class if the state matches our ui-sref -->
+          <div id="status-buttons" class="text-center">
+              <a ui-sref-active="active" href="/loadb/constraints"><span>1</span> Constraints</a>
+              <a ui-sref-active="active" href="/loadb/layer-group"><span>2</span> Layer-Group</a>
+              <a ui-sref-active="active" href="/loadb/layer-strategy" ><span>3</span>Layer Strategy</a>
+              <a ui-sref-active="active" href="/loadb/criticality" style="color:red"><span>4</span>Criticality</a>
+              <a ui-sref-active="active" href="/loadb/upload"><span>5</span> File Upload</a>
+          </div>
+      </div>
+      <div id="form-views" ui-view>
+
+<div class="span1"></div>
+<table border="2" style="width:80%">
+	<tr>
+		<th>ID</th>
+		<th>Weight</th>
+		<th>Asset Flex</th>
+		<th>Load Flex</th>
+		<th>Yield Loss</th>
+		<th>Load Mix</th>
+		<th>Number Assets</th>	
+		<th>Number Colors</th>	
+		<th>Least Asset Flex</th>		
+	</tr>
+	<tr style="text-align:center">
+		<td>C1</td>
+		<td>4</td>
+		<td>5</td>
+		<td>2</td>
+		<td>1</td>
+		<td>6</td>
+		<td>7</td>
+		<td>3</td>
+		<td>8</td>	
+	</tr>
+
+		<tr style="text-align:center">
+		<td>C2</td>
+		<td>2</td>
+		<td>1</td>
+		<td>3</td>
+		<td>4</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>	
+	</tr>
+
+	<tr style="text-align:center">
+		<td>C3</td>
+		<td>1</td>
+		<td>3</td>
+		<td>2</td>
+		<td>4</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>	
+	</tr>
+
+<tr style="text-align:center">
+		<td>C4</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>1</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>	
+	</tr>
+</table>
+<br>
+<br>
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+<div class="span1">
+  
+</div>  
+    <a href="/loadb/upload" class="btn btn-block btn-info span8">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+</template>

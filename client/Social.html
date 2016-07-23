@@ -1,0 +1,27 @@
+<head>
+  <title>D2D</title>
+</head>
+
+<body>
+  {{>navigation}}
+  <div class="container-fluid">
+  	<div class="row-fluid">
+  		<div class="span2">
+  			{{>sidebar}}
+  		</div>
+  		<div class="span10 ">
+  			{{>yield}}
+  		</div>
+  	</div>
+  </div>
+{{>yield "footer"}}
+</body>
+
+<template name="footer">
+    <nav class=" navbar-default navbar-fixed-bottom">
+                <div my-footer>
+                    <p class="navbar-left navbar-text">All Contents © 2015, D2D Maps. All Rights Reserved.</p>
+                    <p class="navbar-right navbar-text"><a href="#/about">About us</a> | <a href="#/legal">Legal</a> | <a href="#/contact">Contact us</a></p>
+                </div>
+            </nav>
+</template>
